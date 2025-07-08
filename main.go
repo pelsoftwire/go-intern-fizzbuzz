@@ -8,6 +8,14 @@ import (
 	"strings"
 )
 
+func reverse(slice []string) []string {
+	var output []string
+	for i := len(slice) - 1; i >= 0; i-- {
+		output = append(output, slice[i])
+	}
+	return output
+}
+
 func fizzBuzz(i int) string {
 	var output []string
 	if i%3 == 0 {
@@ -21,6 +29,9 @@ func fizzBuzz(i int) string {
 	}
 	if i%11 == 0 {
 		output = []string{"Bong"}
+	}
+	if i%17 == 0 {
+		output = reverse(output)
 	}
 	if len(output) == 0 {
 		return strconv.Itoa(i)
