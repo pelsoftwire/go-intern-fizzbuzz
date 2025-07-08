@@ -12,6 +12,8 @@ var fizzBuzzTests = []fizzBuzzTest{
 	{3, "Fizz"},
 	{5, "Buzz"},
 	{15, "FizzBuzz"},
+	{7, "Bang"},
+	{21, "FizzBang"},
 }
 
 func TestFizzBuzz(t *testing.T) {
@@ -19,7 +21,6 @@ func TestFizzBuzz(t *testing.T) {
 		result := fizzBuzz(test.input)
 		if result != test.expectedOutput {
 			t.Errorf("FizzBuzz(%d): Expected '%s', got '%s'", test.input, test.expectedOutput, result)
-
 		}
 	}
 }
