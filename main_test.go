@@ -22,7 +22,7 @@ var fizzBuzzTests = []fizzBuzzTest{
 
 func TestFizzBuzz(t *testing.T) {
 	for _, test := range fizzBuzzTests {
-		result := fizzBuzz(test.input)
+		result := fizzBuzz(getBaseRules(), test.input)
 		if result != test.expectedOutput {
 			t.Errorf("FizzBuzz(%d): Expected '%s', got '%s'", test.input, test.expectedOutput, result)
 		}
