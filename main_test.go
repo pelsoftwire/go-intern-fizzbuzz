@@ -14,6 +14,8 @@ var fizzBuzzTests = []fizzBuzzTest{
 	{15, "FizzBuzz"},
 	{7, "Bang"},
 	{21, "FizzBang"},
+	{11, "Bong"},
+	{33, "Bong"},
 }
 
 func TestFizzBuzz(t *testing.T) {
